@@ -1,0 +1,21 @@
+{
+    "id":"chatcmpl-8KvIxydnZee2lj85c0h42Ou5rfXzT",
+    "object":"chat.completion",
+    "created":1699997531,
+    "model":"gpt-3.5-turbo-1106",
+    "choices":[
+        {
+            "index":0,
+            "message":{
+                "role":"assistant",
+                "content":"The user is asking for details on how to test an API using Postman, including authorization, headers, body, and other parameters."
+                },
+            "finish_reason":"stop"
+        }],
+    "usage":{
+        "prompt_tokens":204,
+        "completion_tokens":27,
+        "total_tokens":231
+        },
+    "system_fingerprint":"fp_eeff13170a"
+}
