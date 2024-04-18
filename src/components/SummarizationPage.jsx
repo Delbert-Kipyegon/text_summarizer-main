@@ -1,13 +1,16 @@
 import React from "react";
 import { useState } from "react";
-import { summarizeText } from "../openai";
+import { summarizeText } from "../utils/openai";
+import { useAlert } from "react-alert";
 
 const SummarizationPage = () => {
 	const [value, setValue] = useState(null);
 	const [data, setData] = useState([null]);
 	const [submitting, setSubmitting] = useState(false);
+	const alert = useAlert(); // Access alert context
 
 	// function to handle submit data(text to be summarized)
+
 	const handlesubmit = async (e) => {
 		// prevent empty submission
 		e.preventDefault();
@@ -15,14 +18,38 @@ const SummarizationPage = () => {
 
 		try {
 			const text = await summarizeText(value);
-
 			setSubmitting(false);
 			setData(text);
 			console.log(`The summary text is: ${text}`);
+			// Display a success message to the user using the alert context
+			alert.success("Text summarized successfully!", {
+				timeout: 3000, // Timeout in milliseconds
+				position: "top center", // Position of the alert
+				type: "success", // Type of the alert
+				containerStyle: {
+					background: "#32CD32", // Custom background color
+					color: "#fff", // Custom text color
+				},
+				alertStyle: {
+					fontSize: "12px", // Custom font size
+				},
+			});
 		} catch (error) {
 			setSubmitting(false);
 			console.error("Error:", error.message);
-			// Display an error message to the user
+			// Display an error message to the user using the alert context
+			alert.error("An error occurred. Please try again later.", {
+				timeout: 3000, // Timeout in milliseconds
+				position: "top center", // Position of the alert
+				type: "error", // Type of the alert
+				containerStyle: {
+					background: "#B82B26", // Custom background color
+					color: "#fff", // Custom text color
+				},
+				alertStyle: {
+					fontSize: "12px", // Custom font size
+				},
+			});
 		}
 	};
 
@@ -41,9 +68,7 @@ const SummarizationPage = () => {
 					<h1 className="text-3xl text-white text-center leading-10 font-semibold">
 						Summarize Text with
 						<br />
-						<span className="text-5xl font-bold text-cyan-500">
-							eSum
-						</span>
+						<span className="text-5xl font-bold text-cyan-500">eSum</span>
 					</h1>
 					<p className="mt-5 text-lg text-gray-500 sm:text-xl text-center max-w-2xl">
 						Paste your text below!
