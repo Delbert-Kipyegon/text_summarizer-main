@@ -8,7 +8,6 @@ const SummarizationPage = () => {
 	const [submitting, setSubmitting] = useState(false);
 
 	// function to handle submit data(text to be summarized)
-
 	const handlesubmit = async (e) => {
 		// prevent empty submission
 		e.preventDefault();
@@ -36,15 +35,6 @@ const SummarizationPage = () => {
 		>
 			<div className="w-full">
 				<div
-					className="flex flex-row justify-between items-center
-          w-full h-10 px-5 2xl:px-40"
-				>
-					<h3 className="cursor-pointer text-3xl font-bold text-cyan-600">
-						eSum
-					</h3>
-				</div>
-
-				<div
 					className="flex flex-col items-center justify-center
           mt-4 p-4"
 				>
@@ -52,11 +42,11 @@ const SummarizationPage = () => {
 						Summarize Text with
 						<br />
 						<span className="text-5xl font-bold text-cyan-500">
-							Text Summarizer
+							eSum
 						</span>
 					</h1>
 					<p className="mt-5 text-lg text-gray-500 sm:text-xl text-center max-w-2xl">
-						Simply paste your document and get a summary, ASAP!
+						Paste your text below!
 					</p>
 				</div>
 

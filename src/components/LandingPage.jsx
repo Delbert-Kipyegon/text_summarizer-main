@@ -1,30 +1,17 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 
 const LandingPage = () => {
-	const [backgroundColor, setBackgroundColor] = useState("");
-	const cyanShades = ["#25737f","#00bcd4"];
-
-	useEffect(() => {
-		const interval = setInterval(() => {
-			setBackgroundColor((prevColor) => {
-				const currentIndex = cyanShades.indexOf(prevColor);
-				const nextIndex = (currentIndex + 1) % cyanShades.length;
-				return cyanShades[nextIndex];
-			});
-		}, 6000);
-
-		return () => clearInterval(interval);
-	}, []);
-
 	return (
 		<div className="bg-[#0f172a] font-roboto min-h-screen">
 			{/* Intro Section */}
-			<header
-				style={{ backgroundColor }}
-				className=" h-screen mx-auto text-white flex items-center justify-center"
-			>
+			<header className=" bg-cyan-800 h-screen mx-auto text-white flex items-center justify-center">
 				<div className="max-w-7xl text-3xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center justify-center">
-					<h1 className="text-4xl font-bold mb-4">eSum</h1>
+					<h1 className="text-7xl font-bold mb-4">
+						<span style={{ color: "#e5e4e2" }}>e</span>
+						<span style={{ color: "gold" }}>Sum</span>
+						<span className="text-xs text-black align-top ">TM</span>
+					</h1>
+
 					<p className="text-4xl mb-6">
 						Simply paste your document and get a summary, ASAP!
 					</p>
@@ -131,7 +118,9 @@ const LandingPage = () => {
 					</p>
 					<div className="flex justify-center space-x-4 mb-6">
 						<a
-							href="#"
+							target="_blank"
+							rel="noreferrer"
+							href="https://github.com/Delbert-Kipyegon/text_summarizer-main"
 							className="text-lg hover:underline"
 						>
 							GitHub
