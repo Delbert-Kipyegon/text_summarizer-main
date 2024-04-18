@@ -9,12 +9,16 @@ const Footer = () => {
 					<a
 						href="https://github.com/Delbert-Kipyegon"
 						className="mr-4 hover:underline"
+						target="_blank"
+						rel="noreferrer"
 					>
 						Delbert Kipyegon
 					</a>
 					<a
 						href="https://github.com/Irwaresly"
 						className="hover:underline"
+						target="_blank"
+						rel="noreferrer"
 					>
 						Silvia Irware
 					</a>
