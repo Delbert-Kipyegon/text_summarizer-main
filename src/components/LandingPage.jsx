@@ -1,4 +1,5 @@
 import React from "react";
+import { FaGithub } from "react-icons/fa";
 
 const LandingPage = () => {
 	return (
@@ -101,11 +102,11 @@ const LandingPage = () => {
 			{/* About Section */}
 			<section
 				id="about"
-				className="bg-cyan-800  text-white py-12"
+				className="bg-cyan-800 text-white py-12"
 			>
 				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 					<h2 className="text-3xl text-center font-bold mb-8">About</h2>
-					<p className="mb-6 px-10  font-normal text-xl">
+					<p className="mb-6 px-4 sm:px-10 font-normal text-xl text-center">
 						This project was inspired by the need for an efficient text
 						summarization tool. As a Portfolio Project for Holberton School,
 						eSum aims to provide a user-friendly solution for summarizing large
@@ -116,7 +117,8 @@ const LandingPage = () => {
 						seconds, streamlining the process of extracting important
 						information.
 					</p>
-					<div className="flex justify-center space-x-4 mb-6">
+					<div className="flex justify-center items-center space-x-4 mb-6">
+						<FaGithub size={24} />
 						<a
 							target="_blank"
 							rel="noreferrer"
