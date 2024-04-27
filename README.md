@@ -7,6 +7,8 @@ eSum Text Summarizer is a web application designed to simplify the process of su
 **Links:**
 
 - [Deployed Site](https://text-summarizer-main.vercel.app/)
+
+- **Github Links:**
 - [Delbert Kipyegon](https://www.linkedin.com/in/delbert-kipyegon-15b2b61ab/)
 - [Silvia Irware](https://www.linkedin.com/in/silvia-irware-80a636276/)
 
